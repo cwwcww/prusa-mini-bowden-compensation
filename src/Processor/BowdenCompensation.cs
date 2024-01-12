@@ -24,7 +24,11 @@ public static class BowdenCompensation
 
         foreach (var line in gcodeLines)
         {
-            if ((line.StartsWith("G2 ") || line.StartsWith("G3 ")) && !line.Contains(" E"))
+            if (
+                !line.TrimStart().StartsWith(';')
+                && (line.StartsWith("G2 ") || line.StartsWith("G3 "))
+                && !line.Contains(" E")
+            )
             {
                 throw new Exception("Arc travel moves are not supported");
             }

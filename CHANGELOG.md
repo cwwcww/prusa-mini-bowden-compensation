@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Improved arc travel move detection
+
 ## [0.1.1] - 2024-01-13
 
 ### Added
