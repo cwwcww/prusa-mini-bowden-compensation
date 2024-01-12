@@ -1,0 +1,34 @@
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - README.md
+      - CHANGELOG.md
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      Configuration: Release
+    steps:
+    - uses: actions/checkout@v3
+    - run: dotnet restore
+    - run: dotnet build --no-restore
+    - run: dotnet test --no-build
+
+  publish:
+    strategy:
+      matrix:
+        rid: [win-x64, win-arm64, linux-x64, linux-arm64, osx-x64, osx-arm64]
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - run: dotnet publish -p:PublishSingleFile=true -p:PublishTrimmed=true -p:UseAppHost=true -r ${{ matrix.rid }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bowden-compensation-${{ matrix.rid }}-${{ github.ref_name }}
+          path: |
+            src/Processor/bin/Release/net8.0/${{ matrix.rid }}/publish/PrusaMiniBowdenCompensation.Processor*
+            !src/Processor/bin/Release/net8.0/${{ matrix.rid }}/publish/PrusaMiniBowdenCompensation.Processor.pdb
