@@ -58,10 +58,14 @@ It is known that the effect is very dependent on retraction distance (disappeari
 
 Is is also certain that changing the "external" bowden tube (between extruder and printing head) might change the values, especially if it is of a different diameter. The bowden tube also wears out from filament friction, so the compensation values might need tweaking after printing enough filament, especially if it is abrasive.
 
+## Something doesn't work as expected?
+
+[Open an issue](https://github.com/cwwcww/prusa-mini-bowden-compensation/issues).
+
 ## Want to discuss or contribute?
 
 Contributions are welcomed, appreciated and encouraged. If you want to contribute non-trivial amounts of changes, please open an issue and describe your ideas first.
 
-To discuss this project and closely related topics and questions, please use issues.
+To discuss this project and closely related topics and questions, please use [discussion](https://github.com/cwwcww/prusa-mini-bowden-compensation/discussions).
 
 To contact me directly: [Printables](https://www.printables.com/@ivan), [Gitter](https://matrix.to/#/@cwwcww:gitter.im)
