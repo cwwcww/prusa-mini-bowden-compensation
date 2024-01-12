@@ -1,0 +1,18 @@
+<Project>
+    <PropertyGroup>
+        
+        <SolutionName Condition="'$(SolutionName)' == ''">
+            $([System.IO.Path]::GetFileNameWithoutExtension($([System.IO.Directory]::GetFiles("$(MSBuildThisFileDirectory)", "*.sln")[0])))
+        </SolutionName>
+
+        <AssemblyName Condition="'$(SolutionName)' != ''">$(SolutionName).$(MSBuildProjectName)</AssemblyName>
+        <RootNamespace Condition="'$(SolutionName)' != ''">$(SolutionName).$(MSBuildProjectName)</RootNamespace>
+
+        <!-- Consider all warnings as error for release builds. -->
+        <TreatWarningsAsErrors Condition="'$(Configuration)' == 'Release'">true</TreatWarningsAsErrors>
+
+        <!-- Warnings that ConfigurationBinder.Get<T> may break due to trimming -->
+        <NoWarn>$(NoWarn);IL2026</NoWarn>
+
+    </PropertyGroup>
+</Project>
