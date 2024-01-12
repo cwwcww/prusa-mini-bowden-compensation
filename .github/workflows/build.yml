@@ -3,8 +3,8 @@ on:
     branches:
       - main
     paths-ignore:
-      - README.md
-      - CHANGELOG.md
+      - '**.md'
+      - '**.3mf'
   pull_request:
 
 jobs:
