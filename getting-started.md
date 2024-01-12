@@ -39,8 +39,6 @@ Download binary for your platform from the latest [release](https://github.com/c
 Now, in PrusaSlicer, use the following settings (make sure you are in Expert mode):
 * `Print Settings > Output options > Post-processing scripts`
   * Add a line with full path to downloaded binary, like `C:\Users\cwwcww\Downloads\bowden-compensation-win-x64.exe`
-* `Print Settings > Advanced > Slicing > Arc fitting`
-  * Set to `Disabled`
 * `Printer Settings > General > Firmware > Supports binary G-code`
   * Uncheck the box
 

@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Allow processing of files with arc print moves
+
 ## [0.1.0] - 2024-01-12
 
 ### Added
