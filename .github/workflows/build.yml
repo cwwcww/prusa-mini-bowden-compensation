@@ -29,7 +29,7 @@ jobs:
       - run: dotnet publish -p:PublishSingleFile=true -p:PublishTrimmed=true -p:UseAppHost=true -r ${{ matrix.rid }}
       - uses: actions/upload-artifact@v4
         with:
-          name: bowden-compensation-${{ matrix.rid }}-${{ github.ref_name }}
+          name: bowden-compensation-${{ matrix.rid }}
           path: |
             src/Processor/bin/Release/net8.0/${{ matrix.rid }}/publish/PrusaMiniBowdenCompensation.Processor*
             !src/Processor/bin/Release/net8.0/${{ matrix.rid }}/publish/PrusaMiniBowdenCompensation.Processor.pdb
