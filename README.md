@@ -62,6 +62,8 @@ Is is also certain that changing the "external" bowden tube (between extruder an
 
 [Open an issue](https://github.com/cwwcww/prusa-mini-bowden-compensation/issues).
 
+If g-code processing crashes, error details in `bowden_compensation_last_crash.txt` file in the same directory where the binary is located may come useful.
+
 ## Want to discuss or contribute?
 
 Contributions are welcomed, appreciated and encouraged. If you want to contribute non-trivial amounts of changes, please open an issue and describe your ideas first.

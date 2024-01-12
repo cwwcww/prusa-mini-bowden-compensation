@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Save error details to file on crash
+
 ### Fixed
 
 - Allow processing of files with arc print moves
