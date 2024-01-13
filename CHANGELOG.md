@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Improved arc travel move detection
+- Fixed number formatting that occasionally led to extrusion anomalies
 
 ## [0.1.1] - 2024-01-13
 

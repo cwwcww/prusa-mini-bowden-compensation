@@ -65,6 +65,9 @@ public record LinearMoveCommand(bool IsRapid, double? X, double? Y, double? Z, d
         return true;
     }
 
+    private static string DoubleToString(double val) =>
+        val.ToString("F6", CultureInfo.InvariantCulture);
+
     public override string ToString()
     {
         IEnumerable<string> GetParts()
@@ -72,23 +75,23 @@ public record LinearMoveCommand(bool IsRapid, double? X, double? Y, double? Z, d
             yield return IsRapid ? "G0" : "G1";
             if (X is not null)
             {
-                yield return nameof(X) + X.Value.ToString("G6", CultureInfo.InvariantCulture);
+                yield return nameof(X) + DoubleToString(X.Value);
             }
             if (Y is not null)
             {
-                yield return nameof(Y) + Y.Value.ToString("G6", CultureInfo.InvariantCulture);
+                yield return nameof(Y) + DoubleToString(Y.Value);
             }
             if (Z is not null)
             {
-                yield return nameof(Z) + Z.Value.ToString("G6", CultureInfo.InvariantCulture);
+                yield return nameof(Z) + DoubleToString(Z.Value);
             }
             if (E is not null)
             {
-                yield return nameof(E) + E.Value.ToString("G6", CultureInfo.InvariantCulture);
+                yield return nameof(E) + DoubleToString(E.Value);
             }
             if (F is not null)
             {
-                yield return nameof(F) + F.Value.ToString("G6", CultureInfo.InvariantCulture);
+                yield return nameof(F) + DoubleToString(F.Value);
             }
         }
         return string.Join(' ', GetParts());
