@@ -2,7 +2,7 @@
 
 public class TowerModeCompensator(Options.CalibrationOptions options) : IBowdenCompensator
 {
-    public double GetAdditionalExtruderMoveLength(double layerZ, double deltaX)
+    public double GetAdditionalExtruderMoveLength(double layerZ, double deltaX, bool isTravelMove)
     {
         var stepNumber = (int)(layerZ / options.ZHeightPerStep);
         var step = options.Step * stepNumber;

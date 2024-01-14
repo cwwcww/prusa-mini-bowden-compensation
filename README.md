@@ -14,8 +14,10 @@ Available options:
 
 | Option | Default value | Possible values | Description |
 | --- | -- | --- | --- |
-| `Compensation:RightMoveCompensation` | `0.4` | Numbers | Extrusion compensation coefficient for left-to-right moves |
-| `Compensation:LeftMoveCompensation` | `0.2` | Numbers | Extrusion compensation coefficient for right-to-left moves |
+| `Compensation:RightMoveCompensation` | `0.4` | Numbers | Extrusion compensation coefficient for left-to-right travel moves |
+| `Compensation:LeftMoveCompensation` | `0.2` | Numbers | Extrusion compensation coefficient for right-to-left travel moves |
+| `Compensation:RightPrintMoveCompensation` | Same as travel move | Numbers | Extrusion compensation coefficient for left-to-right print moves |
+| `Compensation:LeftPrintMoveCompensation` | Same as travel move | Numbers | Extrusion compensation coefficient for right-to-left print moves |
 | `EnableCalibrationMode` | `False` | `True`, `False` | Uses variable compensation values across layers. Uses `Calibration:*` options. |
 | `Calibration:MinValue` | `0` | Numbers | Minimum compensation coefficient to try |
 | `Calibration:MaxValue` | `1` | Numbers | Maximum compensation coefficient to try |

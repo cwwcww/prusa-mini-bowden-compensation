@@ -6,6 +6,9 @@ public class Options
     {
         public double RightMoveCompensation { get; set; } = 0.4;
         public double LeftMoveCompensation { get; set; } = 0.2;
+
+        public double? RightPrintMoveCompensation { get; set; } = null!;
+        public double? LeftPrintMoveCompensation { get; set; } = null!;
     }
 
     public class CalibrationOptions

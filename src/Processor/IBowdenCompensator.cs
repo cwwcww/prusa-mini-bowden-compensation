@@ -2,5 +2,5 @@
 
 public interface IBowdenCompensator
 {
-    double GetAdditionalExtruderMoveLength(double layerZ, double deltaX);
+    double GetAdditionalExtruderMoveLength(double layerZ, double deltaX, bool isTravelMove);
 }

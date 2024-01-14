@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Compensation of print moves (with separately configured coefficients)
+
+### Changed
+
+- Processing of files with arc moves is not supported again
+
 ## [0.1.2] - 2024-01-13
 
 ### Fixed
