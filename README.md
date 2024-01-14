@@ -56,7 +56,7 @@ Calculating the compensation value, measuring length to ideal Z from the top, wo
 
 It is known that the effect is very dependent on retraction distance (disappearing completely on low retraction distances even without compensation - for the price of stringing). 
 
-Is is also certain that changing the "external" bowden tube (between extruder and printing head) might change the values, especially if it is of a different diameter. The bowden tube also wears out from filament friction, so the compensation values might need tweaking after printing enough filament, especially if it is abrasive.
+Is is also certain that changing the "external" bowden tube (between extruder and printing head) might change the values, especially if it is of a different diameter. The bowden tube also wears out from filament friction, so the compensation values might need tweaking after printing enough filament, especially if it is abrasive. There are [reports](https://github.com/prusa3d/Prusa-Firmware-Buddy/issues/2997#issuecomment-1890834775) of bowden tube wearing out dramatically after 8-17kg of high-speed PLA printing.
 
 ## Something doesn't work as expected?
 
