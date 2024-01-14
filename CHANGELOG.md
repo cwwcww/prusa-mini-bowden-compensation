@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Processing of files with arc moves is not supported again
 
+### Fixed
+
+- Processor now crashes when bgcode is enabled instead of producing corrupted file
+
 ## [0.1.2] - 2024-01-13
 
 ### Fixed

@@ -4,6 +4,10 @@ public class GcodePostprocessor(Options options)
 {
     public void Run(string gcodePath)
     {
+        if (IsBGCodeFile(gcodePath))
+        {
+            throw new Exception("Binary G-Code is not supported");
+        }
         var originalGcode = ReadLines(gcodePath);
         var modifiedGcode = BowdenCompensation.Compensate(
             originalGcode,
@@ -40,5 +44,12 @@ public class GcodePostprocessor(Options options)
         {
             writer.WriteLine(line);
         }
+    }
+
+    private static bool IsBGCodeFile(string path)
+    {
+        using var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
+        using var reader = new BinaryReader(stream);
+        return new string(reader.ReadChars(4)) == "GCDE";
     }
 }
