@@ -4,6 +4,12 @@ This is a [G-code post-processor](https://help.prusa3d.com/article/post-processi
 
 **Own Prusa MINI? See [Getting Started](getting-started.md).**
 
+## Limitations
+
+This post-processor doesn't support:
+* Binary G-Code (`Printer Settings > General > Firmware > Supports binary G-code` must be unchecked)
+* Arc moves (`Print Settings > Advanced > Slicing > Arc fitting` must be `Disabled`)
+
 ## Configuration
 
 The processor is configured by adding arguments after its path in "Post-processing scripts" field in PrusaSlicer.
