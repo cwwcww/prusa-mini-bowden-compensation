@@ -47,7 +47,7 @@ C:\your\path\bowden-compensation-win-x64.exe --EnableCalibrationMode True
 
 Creating calibration print for 40mm high model, trying values from 0 to 2 with step 0.1 for 2mm each:
 ```
-C:\your\path\bowden-compensation-win-x64.exe --Calibration:MinValue 0 --Calibration:MaxValue 2 --Calibration:Step 0.1 --Calibration:ZHeightPerStep 2
+C:\your\path\bowden-compensation-win-x64.exe --EnableCalibrationMode True --Calibration:MinValue 0 --Calibration:MaxValue 2 --Calibration:Step 0.1 --Calibration:ZHeightPerStep 2
 ```
 
 ## Calibration with custom models and parameters
