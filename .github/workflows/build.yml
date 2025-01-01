@@ -31,5 +31,5 @@ jobs:
         with:
           name: bowden-compensation-${{ matrix.rid }}
           path: |
-            src/Processor/bin/Release/net8.0/${{ matrix.rid }}/publish/PrusaMiniBowdenCompensation.Processor*
-            !src/Processor/bin/Release/net8.0/${{ matrix.rid }}/publish/PrusaMiniBowdenCompensation.Processor.pdb
+            src/Processor/bin/Release/net9.0/${{ matrix.rid }}/publish/PrusaMiniBowdenCompensation.Processor*
+            !src/Processor/bin/Release/net9.0/${{ matrix.rid }}/publish/PrusaMiniBowdenCompensation.Processor.pdb
