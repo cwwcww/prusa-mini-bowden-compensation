@@ -2,15 +2,6 @@
 
 public class Options
 {
-    public class CompensationOptions
-    {
-        public double RightMoveCompensation { get; set; } = 0.4;
-        public double LeftMoveCompensation { get; set; } = 0.2;
-
-        public double? RightPrintMoveCompensation { get; set; } = null!;
-        public double? LeftPrintMoveCompensation { get; set; } = null!;
-    }
-
     public class CalibrationOptions
     {
         public double MinValue { get; set; } = 0;
@@ -19,8 +10,6 @@ public class Options
         public double ZHeightPerStep { get; set; } = 1;
         public bool Reverse { get; set; } = true;
     }
-
-    public CompensationOptions Compensation { get; set; } = new();
 
     public bool EnableCalibrationMode { get; set; } = false;
     public CalibrationOptions Calibration { get; set; } = new();

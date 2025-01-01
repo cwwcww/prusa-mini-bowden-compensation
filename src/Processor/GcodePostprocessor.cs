@@ -13,7 +13,7 @@ public class GcodePostprocessor(Options options)
             originalGcode,
             options.EnableCalibrationMode
                 ? new TowerModeCompensator(options.Calibration)
-                : new NormalCompensator(options.Compensation)
+                : new NormalCompensator()
         );
         var tempPath = gcodePath + "_tmp";
         WriteLines(tempPath, modifiedGcode);
